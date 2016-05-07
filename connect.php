@@ -20,8 +20,8 @@
     else{
       echo "Invalid Login";
     }
-
-
   }
+
+  mysqli_close($mysqli);
 
 ?>
