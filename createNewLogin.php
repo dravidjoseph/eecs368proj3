@@ -15,7 +15,7 @@ if(isset($_POST['signup'])){
   $password = mysqli_real_escape_string($mysqli,$_POST['pass']);
 
   //check for duplicates
-  $check = $mysqli->query("SELECT User FROM projUsers WHERE UserName = $username");
+  $check = $mysqli->query("SELECT User FROM projUsers WHERE User = '$username'");
   //if no duplicates, insert
   if($check->num_rows == 0){
     $insert = "INSERT INTO projUsers (User,Password) VALUES ('$username','$password')";
