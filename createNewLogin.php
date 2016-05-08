@@ -20,16 +20,13 @@ if(isset($_POST['signup'])){
   if($check->num_rows == 0){
     $insert = "INSERT INTO projUsers (User,Password) VALUES ('$username','$password')";
     if($mysqli->query($insert) == TRUE){
-      echo "Success!";
-      header("Location: Tasks.php");
+      header("Location: success.php");
     }
     else{
-      echo "Error";
       header("Location: newUser.html");
     }
   }
   else{
-    echo "Username already taken";
     header("Location: newUser.html");
   }
 
