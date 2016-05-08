@@ -107,12 +107,12 @@ echo "<table border='5'>";
 
 $listsFromUser =  $mysqli->query($search);
 
-while($row = $listsFromUser->fetch_assoc())
+		while($row = $listsFromUser->fetch_assoc())
 		{
 			echo "<td>".$row["*"]."</td>".PHP_EOL; 
 		}
 		echo "</table>";
 
 
-echo "<a href='userLists.php'>".'Click to return to table'."</a>".PHP_EOL;
+echo "<a href='createlist.php'>".'Click to return to make a new list'."</a>".PHP_EOL;
 ?>
