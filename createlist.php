@@ -1,20 +1,12 @@
 <?php
 	//these functions get the information from the html page.
-<<<<<<< HEAD
+
 	session_start();
 	//$username = $_GET['uname'];
 	$username = $_SESSION['login_user'];
-||||||| merged common ancestors
-	$username = $_GET['uname'];
-	$username = $_SESSION['login_user'];
-=======
-	session_start();
-	//$username = $_GET['uname'];
-	$username = $_SESSION['login_user'];
->>>>>>> 78a3e430e45c20f42d26b113ac4d1fb61226a8d1
 	$title = $_GET['Title'];
-	$x = $title.".txt";
-	$title = $x;
+//	$x = $title.".txt";
+	//$title = $x;
 	$mt1 = $_GET['mon1'];
 	$mt2 = $_GET['mon2'];
 	$mt3 = $_GET['mon3'];
@@ -70,7 +62,7 @@
 		        }
 		      }
 		    }
-		    
+
 		    if($result)
 		    {
 		      if(($result = $mysqli->query($query1)) == true)
@@ -85,7 +77,7 @@
 		    else
 		    {
 		      echo "not successfully added b/c username does not exist".PHP_EOL;
-		    }	
+		    }
 	    }
 	    else
 	    {
@@ -147,7 +139,7 @@
 	fwrite($myfileWrite, $txt);
 	fclose($myfileWrite);
 */
-	echo "".PHP_EOL;
-	echo "Your List was Created!"
-	echo "<a href='http://http://people.eecs.ku.edu/~djoseph/eecs368proj3/logout.php'>".'Click to logout.'."</a>";
+	echo " ".PHP_EOL;
+	echo "Your List was Created!";
+	echo "<a href='logout.php'>".'Click to logout.'."</a>";
 ?>
