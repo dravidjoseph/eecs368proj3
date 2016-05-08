@@ -27,7 +27,7 @@ $su2 = $_GET['sun2'];
 $su3 = $_GET['sun3'];
 
 if($m1 != ""){
-$um1 = $mysqli->query("UPDATE projData SET 'mondayTask1' = '$m1' WHERE 'title' = '$title'");
+$um1 = $mysqli->query("UPDATE projData SET mondayTask1 = '$m1' WHERE title = '$title'");
   if($um1){
     echo "Monday task 1 successfully edited"."<br>";
   }
@@ -36,7 +36,7 @@ $um1 = $mysqli->query("UPDATE projData SET 'mondayTask1' = '$m1' WHERE 'title' =
   }
 }
 if($m2 != ""){
-$um2 = $mysqli->query("UPDATE projData SET 'mondayTask2' = '$m2' WHERE 'title' = '$title'");
+$um2 = $mysqli->query("UPDATE projData SET mondayTask2 = '$m2' WHERE title = '$title'");
   if($um2){
     echo "Monday task 2 successfully edited"."<br>";
   }
@@ -45,7 +45,7 @@ $um2 = $mysqli->query("UPDATE projData SET 'mondayTask2' = '$m2' WHERE 'title' =
   }
 }
 if($m3 != ""){
-$um3 = $mysqli->query("UPDATE projData SET 'mondayTask3' = '$m3' WHERE 'title' = '$title'");
+$um3 = $mysqli->query("UPDATE projData SET mondayTask3 = '$m3' WHERE title = '$title'");
   if($um3){
     echo "Monday task 3 successfully edited"."<br>";
   }
@@ -54,7 +54,7 @@ $um3 = $mysqli->query("UPDATE projData SET 'mondayTask3' = '$m3' WHERE 'title' =
   }
 }
 if($tu1 != ""){
-$utu1 = $mysqli->query("UPDATE projData SET 'tuesdayTask1' = '$tu1' WHERE 'title' = '$title'");
+$utu1 = $mysqli->query("UPDATE projData SET tuesdayTask1 = '$tu1' WHERE title = '$title'");
   if($utu1){
     echo "Tuesday task 1 successfully edited"."<br>";
   }
@@ -63,7 +63,7 @@ $utu1 = $mysqli->query("UPDATE projData SET 'tuesdayTask1' = '$tu1' WHERE 'title
   }
 }
 if($tu2 != ""){
-$utu2 = $mysqli->query("UPDATE projData SET 'tuesdayTask2' = '$tu2' WHERE 'title' = '$title'");
+$utu2 = $mysqli->query("UPDATE projData SET tuesdayTask2 = '$tu2' WHERE title = '$title'");
   if($utu2){
     echo "Tuesday task 2 successfully edited"."<br>";
   }
@@ -72,7 +72,7 @@ $utu2 = $mysqli->query("UPDATE projData SET 'tuesdayTask2' = '$tu2' WHERE 'title
   }
 }
 if($tu3 != ""){
-$utu3 = $mysqli->query("UPDATE projData SET 'tuesdayTask3' = '$tu3' WHERE 'title' = '$title'");
+$utu3 = $mysqli->query("UPDATE projData SET tuesdayTask3 = '$tu3' WHERE title = '$title'");
   if($utu3){
     echo "Tuesday task 3 successfully edited"."<br>";
   }
@@ -81,7 +81,7 @@ $utu3 = $mysqli->query("UPDATE projData SET 'tuesdayTask3' = '$tu3' WHERE 'title
   }
 }
 if($w1 != ""){
-$uw1 = $mysqli->query("UPDATE projData SET 'wednesdayTask1' = '$w1' WHERE 'title' = '$title'");
+$uw1 = $mysqli->query("UPDATE projData SET wednesdayTask1 = '$w1' WHERE title = '$title'");
   if($uw1){
     echo "Wednesday task 1 successfully edited"."<br>";
   }
@@ -90,7 +90,7 @@ $uw1 = $mysqli->query("UPDATE projData SET 'wednesdayTask1' = '$w1' WHERE 'title
   }
 }
 if($w2 != ""){
-$uw2 = $mysqli->query("UPDATE projData SET 'wednesdayTask2' = '$w2' WHERE 'title' = '$title'");
+$uw2 = $mysqli->query("UPDATE projData SET wednesdayTask2 = '$w2' WHERE title = '$title'");
   if($uw2){
     echo "Wednesday task 2 successfully edited"."<br>";
   }
@@ -99,7 +99,7 @@ $uw2 = $mysqli->query("UPDATE projData SET 'wednesdayTask2' = '$w2' WHERE 'title
   }
 }
 if($w3 != ""){
-$uw3 = $mysqli->query("UPDATE projData SET 'wednesdayTask3' = '$w3' WHERE 'title' = '$title'");
+$uw3 = $mysqli->query("UPDATE projData SET wednesdayTask3 = '$w3' WHERE title = '$title'");
   if($uw3){
     echo "Wednesday task 3 successfully edited"."<br>";
   }
@@ -108,7 +108,7 @@ $uw3 = $mysqli->query("UPDATE projData SET 'wednesdayTask3' = '$w3' WHERE 'title
   }
 }
 if($th1 != ""){
-$uth1 = $mysqli->query("UPDATE projData SET 'thursdayTask1' = '$th1' WHERE 'title' = '$title'");
+$uth1 = $mysqli->query("UPDATE projData SET thursdayTask1 = '$th1' WHERE title = '$title'");
   if($uth1){
     echo "Thursday task 1 successfully edited"."<br>";
   }
@@ -117,7 +117,7 @@ $uth1 = $mysqli->query("UPDATE projData SET 'thursdayTask1' = '$th1' WHERE 'titl
   }
 }
 if($th2 != ""){
-$uth2 = $mysqli->query("UPDATE projData SET 'thursdayTask2' = '$th2' WHERE 'title' = '$title'");
+$uth2 = $mysqli->query("UPDATE projData SET thursdayTask2 = '$th2' WHERE title = '$title'");
   if($uth2){
     echo "Thursday task 2 successfully edited"."<br>";
   }
@@ -126,7 +126,7 @@ $uth2 = $mysqli->query("UPDATE projData SET 'thursdayTask2' = '$th2' WHERE 'titl
   }
 }
 if($th3 != ""){
-$uth3 = $mysqli->query("UPDATE projData SET 'thursdayTask3' = '$th3' WHERE 'title' = '$title'");
+$uth3 = $mysqli->query("UPDATE projData SET thursdayTask3 = '$th3' WHERE title = '$title'");
   if($uth3){
     echo "Thursday task 3 successfully edited"."<br>";
   }
@@ -135,7 +135,7 @@ $uth3 = $mysqli->query("UPDATE projData SET 'thursdayTask3' = '$th3' WHERE 'titl
   }
 }
 if($f1 != ""){
-$uf1 = $mysqli->query("UPDATE projData SET 'fridayTask1' = '$f1' WHERE 'title' = '$title'");
+$uf1 = $mysqli->query("UPDATE projData SET fridayTask1 = '$f1' WHERE title = '$title'");
   if($uf1){
     echo "Friday task 1 successfully edited"."<br>";
   }
@@ -144,7 +144,7 @@ $uf1 = $mysqli->query("UPDATE projData SET 'fridayTask1' = '$f1' WHERE 'title' =
   }
 }
 if($f2 != ""){
-$uf2 = $mysqli->query("UPDATE projData SET 'fridayTask2' = '$f2' WHERE 'title' = '$title'");
+$uf2 = $mysqli->query("UPDATE projData SET fridayTask2 = '$f2' WHERE title = '$title'");
   if($uf2){
     echo "Friday task 2 successfully edited"."<br>";
   }
@@ -153,7 +153,7 @@ $uf2 = $mysqli->query("UPDATE projData SET 'fridayTask2' = '$f2' WHERE 'title' =
   }
 }
 if($f3 != ""){
-$uf3 = $mysqli->query("UPDATE projData SET 'fridayTask3' = '$f3' WHERE 'title' = '$title'");
+$uf3 = $mysqli->query("UPDATE projData SET fridayTask3 = '$f3' WHERE title = '$title'");
   if($uf3){
     echo "Friday task 3 successfully edited"."<br>";
   }
@@ -162,7 +162,7 @@ $uf3 = $mysqli->query("UPDATE projData SET 'fridayTask3' = '$f3' WHERE 'title' =
   }
 }
 if($sa1 != ""){
-$usa1 = $mysqli->query("UPDATE projData SET 'saturdayTask1' = '$sa1' WHERE 'title' = '$title'");
+$usa1 = $mysqli->query("UPDATE projData SET saturdayTask1 = '$sa1' WHERE title = '$title'");
   if($usa1){
     echo "Saturday task 1 successfully edited"."<br>";
   }
@@ -171,7 +171,7 @@ $usa1 = $mysqli->query("UPDATE projData SET 'saturdayTask1' = '$sa1' WHERE 'titl
   }
 }
 if($sa2 != ""){
-$usa2 = $mysqli->query("UPDATE projData SET 'saturdayTask2' = '$sa2' WHERE 'title' = '$title'");
+$usa2 = $mysqli->query("UPDATE projData SET saturdayTask2 = '$sa2' WHERE title = '$title'");
   if($usa2){
     echo "Saturday task 2 successfully edited"."<br>";
   }
@@ -180,7 +180,7 @@ $usa2 = $mysqli->query("UPDATE projData SET 'saturdayTask2' = '$sa2' WHERE 'titl
   }
 }
 if($sa3 != ""){
-$usa3 = $mysqli->query("UPDATE projData SET 'saturdayTask3' = '$sa3' WHERE 'title' = '$title'");
+$usa3 = $mysqli->query("UPDATE projData SET saturdayTask3 = '$sa3' WHERE title = '$title'");
   if($usa3){
     echo "Saturday task 3 successfully edited"."<br>";
   }
@@ -189,7 +189,7 @@ $usa3 = $mysqli->query("UPDATE projData SET 'saturdayTask3' = '$sa3' WHERE 'titl
   }
 }
 if($su1 != ""){
-$usu1 = $mysqli->query("UPDATE projData SET 'sundayTask1' = '$su1' WHERE 'title' = '$title'");
+$usu1 = $mysqli->query("UPDATE projData SET sundayTask1 = '$su1' WHERE title = '$title'");
   if($usu1){
     echo "Sunday task 1 successfully edited"."<br>";
   }
@@ -198,7 +198,7 @@ $usu1 = $mysqli->query("UPDATE projData SET 'sundayTask1' = '$su1' WHERE 'title'
   }
 }
 if($su2 != ""){
-$usu2 = $mysqli->query("UPDATE projData SET 'sundayTask2' = '$su2' WHERE 'title' = '$title'");
+$usu2 = $mysqli->query("UPDATE projData SET sundayTask2 = '$su2' WHERE title = '$title'");
 if($usu2){
   echo "Sunday task 2 successfully edited"."<br>";
 }
@@ -207,7 +207,7 @@ else{
 }
 }
 if($su3 != ""){
-$usu3 = $mysqli->query("UPDATE projData SET 'sundayTask3' = '$su3' WHERE 'title' = '$title'");
+$usu3 = $mysqli->query("UPDATE projData SET sundayTask3 = '$su3' WHERE title = '$title'");
   if($usu3){
     echo "Sunday task 3 successfully edited"."<br>";
   }
@@ -215,6 +215,7 @@ $usu3 = $mysqli->query("UPDATE projData SET 'sundayTask3' = '$su3' WHERE 'title'
     echo "Unable to edit Sunday task 3"."<br>";
   }
 }
+$mysqli->close();
 
 echo "<br>"."<a href='logout.php'>".'Click to logout.'."</a>";
 echo "<br>"."<a href='userLists.php'>".'Click to edit your lists.'."</a>";
