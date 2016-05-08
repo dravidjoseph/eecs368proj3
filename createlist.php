@@ -38,6 +38,8 @@
 
 	//searches throught the user name to find the username given
 	$search = "SELECT User FROM projUsers WHERE User = '$username'";
+	
+	$search2 = "SELECT title FROM projUsers WHERE title = '$title'";
 
 	//this query adds information to the projData column of the tasks that the user enters into the form
 	$query1 = "INSERT INTO projData (username, title, mondayTask1, mondayTask2, mondayTask3, tuesdayTask1, tuesdayTask2, tuesdayTask3, wednesdayTask1, wednesdayTask2, wednesdayTask3, thursdayTask1, thursdayTask2, thursdayTask3, fridayTask1, fridayTask2, fridayTask3, saturdayTask1, saturdayTask2, saturdayTask3, sundayTask1, sundayTask2, sundayTask3)
@@ -50,6 +52,8 @@
 	{
 	    if(!isset($title) || $title !== '')
 	    {
+	     	if($mysqli->query($search2) == false)
+	     	{
 	     	$listOfUsers =  $mysqli->query($search);
 		    if($listOfUsers->num_rows>0)
 		    {
@@ -78,6 +82,11 @@
 		    {
 		      echo "not successfully added b/c username does not exist".PHP_EOL;
 		    }
+	     	}
+	     	else
+	     	{
+                    echo "not successfully added b/c that list already exists".PHP_EOL;
+	     	}
 	    }
 	    else
 	    {
