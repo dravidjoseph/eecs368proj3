@@ -38,7 +38,7 @@
 
 	//searches throught the user name to find the username given
 	$search = "SELECT User FROM projUsers WHERE User = '$username'";
-	
+
 	$search2 = "SELECT title FROM projUsers WHERE title = '$title'";
 
 	//this query adds information to the projData column of the tasks that the user enters into the form
@@ -172,5 +172,5 @@
 	echo "<br>"." ".PHP_EOL;
 	echo "<br>"."Your List was Created!";
 	echo "<br>"."<a href='logout.php'>".'Click to logout.'."</a>";
-	echo "<br>"."<a href='userLists.html'>".'Click to edit your lists.'."</a>";
+	echo "<br>"."<a href='userLists.php'>".'Click to edit your lists.'."</a>";
 ?>
