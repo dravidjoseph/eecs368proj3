@@ -114,5 +114,5 @@ while($row = $listsFromUser->fetch_assoc())
 		echo "</table>";
 
 
-echo "<userLists.php'>".'Click to return to table'."</a>".PHP_EOL;
+echo "<a href='userLists.php'>".'Click to return to table'."</a>".PHP_EOL;
 ?>

@@ -39,6 +39,8 @@
 	//searches throught the user name to find the username given
 	$search = "SELECT User FROM projUsers WHERE User = '$username'";
 
+	$search2 = "SELECT title FROM projUsers WHERE title = '$title'";
+
 	//this query adds information to the projData column of the tasks that the user enters into the form
 	$query1 = "INSERT INTO projData (username, title, mondayTask1, mondayTask2, mondayTask3, tuesdayTask1, tuesdayTask2, tuesdayTask3, wednesdayTask1, wednesdayTask2, wednesdayTask3, thursdayTask1, thursdayTask2, thursdayTask3, fridayTask1, fridayTask2, fridayTask3, saturdayTask1, saturdayTask2, saturdayTask3, sundayTask1, sundayTask2, sundayTask3)
 	 VALUES ('$username','$title','$mt1','$mt2','$mt3','$tut1','$tut2','$tut3','$wt1','$wt2','$wt3','$tht1','$tht2','$tht3','$ft1','$ft2','$ft3','$sat1','$sat2','$sat3','$sut1','$sut2','$sut3')";
@@ -50,6 +52,8 @@
 	{
 	    if(!isset($title) || $title !== '')
 	    {
+	     	if($mysqli->query($search2) == false)
+	     	{
 	     	$listOfUsers =  $mysqli->query($search);
 		    if($listOfUsers->num_rows>0)
 		    {
@@ -78,6 +82,11 @@
 		    {
 		      echo "not successfully added b/c username does not exist".PHP_EOL;
 		    }
+	     	}
+	     	else
+	     	{
+                    echo "not successfully added b/c that list already exists".PHP_EOL;
+	     	}
 	    }
 	    else
 	    {
@@ -163,5 +172,5 @@
 	echo "<br>"." ".PHP_EOL;
 	echo "<br>"."Your List was Created!";
 	echo "<br>"."<a href='logout.php'>".'Click to logout.'."</a>";
-	echo "<br>"."<a href='update.html'>".'Click to edit your lists.'."</a>";
+	echo "<br>"."<a href='userLists.php'>".'Click to edit your lists.'."</a>";
 ?>
