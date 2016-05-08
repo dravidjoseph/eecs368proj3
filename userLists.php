@@ -91,3 +91,31 @@
 		</table>
 	</body>
 </html>
+<?php
+
+session_start();
+$username = $_SESSION['login_user'];
+
+$mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djoseph");
+	if ($mysqli->connect_errno)
+	{
+	  printf("Connect failed: %s\n", $mysqli->connect_error);
+	  exit();
+	}
+
+$search = "SELECT * FROM projData WHERE username = '$username'";
+
+echo "table of all lists by this user".PHP_EOL;		
+echo "<table border='5'>";
+
+$listsFromUser =  $mysqli->query($search);
+
+while($row = $listsFromUser->fetch_assoc())
+		{
+			echo "<td>".$row["*"]."</td>".PHP_EOL; 
+		}
+		echo "</table>";
+
+
+echo "<userLists.php'>".'Click to return to table'."</a>".PHP_EOL;
+?>
