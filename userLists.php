@@ -109,7 +109,28 @@ $listsFromUser =  $mysqli->query($search);
 
 while($row = $listsFromUser->fetch_assoc())
 		{
-			echo "<td>".$row["*"]."</td>".PHP_EOL;
+			echo "<td>".$row["title"]."</td>".PHP_EOL;
+			echo "<td>".$row["mondayTask1"]."</td>".PHP_EOL;
+			echo "<td>".$row["mondayTask2"]."</td>".PHP_EOL;
+			echo "<td>".$row["mondayTask3"]."</td>".PHP_EOL;
+			echo "<td>".$row["tuesdayTask1"]."</td>".PHP_EOL;
+			echo "<td>".$row["tuesdayTask2"]."</td>".PHP_EOL;
+			echo "<td>".$row["tuesdayTask3"]."</td>".PHP_EOL;
+			echo "<td>".$row["wednesdayTask1"]."</td>".PHP_EOL;
+			echo "<td>".$row["wednesdayTask2"]."</td>".PHP_EOL;
+			echo "<td>".$row["wednesdayTask3"]."</td>".PHP_EOL;
+			echo "<td>".$row["thursdayTask1"]."</td>".PHP_EOL;
+			echo "<td>".$row["thursdayTask2"]."</td>".PHP_EOL;
+			echo "<td>".$row["thursdayTask3"]."</td>".PHP_EOL;
+			echo "<td>".$row["fridayTask1"]."</td>".PHP_EOL;
+			echo "<td>".$row["fridayTask2"]."</td>".PHP_EOL;
+			echo "<td>".$row["fridayTask3"]."</td>".PHP_EOL;
+			echo "<td>".$row["saturdayTask1"]."</td>".PHP_EOL;
+			echo "<td>".$row["saturdayTask2"]."</td>".PHP_EOL;
+			echo "<td>".$row["saturdayTask3"]."</td>".PHP_EOL;
+			echo "<td>".$row["sundayTask1"]."</td>".PHP_EOL;
+			echo "<td>".$row["sundayTask2"]."</td>".PHP_EOL;
+			echo "<td>".$row["sundayTask3"]."</td>".PHP_EOL;
 		}
 		echo "</table>";
 
