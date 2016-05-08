@@ -163,4 +163,5 @@
 	echo "<br>"." ".PHP_EOL;
 	echo "<br>"."Your List was Created!";
 	echo "<br>"."<a href='logout.php'>".'Click to logout.'."</a>";
+	echo "<br>"."<a href='userLists.html'>".'Click to edit your lists.'."</a>";
 ?>
