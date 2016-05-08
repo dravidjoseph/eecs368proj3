@@ -4,7 +4,7 @@
   include("config.php");
 
   if(isset($_SESSION['login_user']) != ""){
-    header("location: success.php");
+    header("location: createlist.html");
   }
   if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = mysqli_real_escape_string($mysqli,$_POST['user']);
@@ -15,13 +15,15 @@
 
     if($query -> num_rows == 1){
       $_SESSION['login_user'] = $username;
-      header("location: success.php");
+      mysqli_close($mysqli);
+      header("location: createlist.html");
     }
     else{
+      mysqli_close($mysqli);
       header("location: index.html");
     }
   }
 
-  mysqli_close($mysqli);
+
 
 ?>

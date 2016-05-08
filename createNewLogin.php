@@ -20,6 +20,7 @@ if(isset($_POST['signup'])){
   if($check->num_rows == 0){
     $insert = "INSERT INTO projUsers (User,Password) VALUES ('$username','$password')";
     if($mysqli->query($insert) == TRUE){
+      $_SESSION['login_user'] = $username;
       header("Location: success.php");
     }
     else{
