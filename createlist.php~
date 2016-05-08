@@ -1,8 +1,8 @@
 <?php
 	//these functions get the information from the html page.
-	session_start();
 	//$username = $_GET['uname'];
 	$username = $_SESSION['login_user'];
+	echo $username;
 	$title = $_GET['Title'];
 	$x = $title.".txt";
 	$title = $x;

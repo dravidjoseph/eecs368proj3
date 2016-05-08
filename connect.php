@@ -2,10 +2,11 @@
 
   session_start();
   include("config.php");
-
+/*
   if(isset($_SESSION['login_user']) != ""){
     header("location: createlist.html");
   }
+  */
   if($_SERVER["REQUEST_METHOD"] == "POST"){
     $username = mysqli_real_escape_string($mysqli,$_POST['user']);
     $password = mysqli_real_escape_string($mysqli,$_POST['pass']);
@@ -16,6 +17,7 @@
     if($query -> num_rows == 1){
       $_SESSION['login_user'] = $username;
       mysqli_close($mysqli);
+
       header("location: createlist.html");
     }
     else{
