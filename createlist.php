@@ -1,8 +1,17 @@
 <?php
 	//these functions get the information from the html page.
+<<<<<<< HEAD
 	session_start();
 	//$username = $_GET['uname'];
 	$username = $_SESSION['login_user'];
+||||||| merged common ancestors
+	$username = $_GET['uname'];
+	$username = $_SESSION['login_user'];
+=======
+	session_start();
+	//$username = $_GET['uname'];
+	$username = $_SESSION['login_user'];
+>>>>>>> 78a3e430e45c20f42d26b113ac4d1fb61226a8d1
 	$title = $_GET['Title'];
 	$x = $title.".txt";
 	$title = $x;
