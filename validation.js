@@ -5,7 +5,7 @@ function checkPassWord(){
 
   if(p1 != p2 || p2 == ""){
     alert("Passwords Don't Match.");
-    event.preventDefault();
+    return false;
   }
   return true;
 
