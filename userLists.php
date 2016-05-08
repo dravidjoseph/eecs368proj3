@@ -102,17 +102,17 @@ $mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djosep
 
 $search = "SELECT * FROM projData WHERE username = '$username'";
 
-echo "table of all lists by this user".PHP_EOL;		
+echo "table of all lists by this user".PHP_EOL;
 echo "<table border='5'>";
 
 $listsFromUser =  $mysqli->query($search);
 
-		while($row = $listsFromUser->fetch_assoc())
+while($row = $listsFromUser->fetch_assoc())
 		{
-			echo "<td>".$row["*"]."</td>".PHP_EOL; 
+			echo "<td>".$row["*"]."</td>".PHP_EOL;
 		}
 		echo "</table>";
 
 
-echo "<a href='createlist.php'>".'Click to return to make a new list'."</a>".PHP_EOL;
+echo "<a href = 'userLists.html'>".'Click to return to make a new list'."</a>".PHP_EOL;
 ?>
