@@ -114,5 +114,5 @@ while($row = $listsFromUser->fetch_assoc())
 		echo "</table>";
 
 
-echo "<a href = 'userLists.html'>".'Click to return to make a new list'."</a>".PHP_EOL;
+echo "<a href = 'createlist.html'>".'Click to return to make a new list'."</a>".PHP_EOL;
 ?>
