@@ -107,6 +107,29 @@ echo "<table border='5'>";
 
 $listsFromUser =  $mysqli->query($search);
 
+			echo "<td>"."title"."</td>".PHP_EOL;
+			echo "<td>"."mondayTask1"."</td>".PHP_EOL;
+			echo "<td>"."mondayTask2"."</td>".PHP_EOL;
+			echo "<td>"."mondayTask3"."</td>".PHP_EOL;
+			echo "<td>"."tuesdayTask1"."</td>".PHP_EOL;
+			echo "<td>"."tuesdayTask2"."</td>".PHP_EOL;
+			echo "<td>"."tuesdayTask3"."</td>".PHP_EOL;
+			echo "<td>"."wednesdayTask1"."</td>".PHP_EOL;
+			echo "<td>"."wednesdayTask2"."</td>".PHP_EOL;
+			echo "<td>"."wednesdayTask3"."</td>".PHP_EOL;
+			echo "<td>"."thursdayTask1"."</td>".PHP_EOL;
+			echo "<td>"."thursdayTask2"."</td>".PHP_EOL;
+			echo "<td>"."thursdayTask3"."</td>".PHP_EOL;
+			echo "<td>"."fridayTask1"."</td>".PHP_EOL;
+			echo "<td>"."fridayTask2"."</td>".PHP_EOL;
+			echo "<td>"."fridayTask3"."</td>".PHP_EOL;
+			echo "<td>"."saturdayTask1"."</td>".PHP_EOL;
+			echo "<td>"."saturdayTask2"."</td>".PHP_EOL;
+			echo "<td>"."saturdayTask3"."</td>".PHP_EOL;
+			echo "<td>"."sundayTask1"</td>".PHP_EOL;
+			echo "<td>"."sundayTask2"</td>".PHP_EOL;
+			echo "<td>"."sundayTask3"</td>".PHP_EOL;
+
 while($row = $listsFromUser->fetch_assoc())
 		{
 			echo "<td>".$row["title"]."</td>".PHP_EOL;
@@ -136,4 +159,5 @@ while($row = $listsFromUser->fetch_assoc())
 
 
 echo "<a href = 'createlist.html'>".'Click to return to make a new list'."</a>".PHP_EOL;
+echo "<a href = logout.php'>".'Click to logout'."</a>".PHP_EOL;
 ?>
