@@ -1,12 +1,13 @@
 <?php
 	//these functions get the information from the html page.
-
+	//created by Mike Wang
 	session_start();
-	//$username = $_GET['uname'];
+	//get username from login
 	$username = $_SESSION['login_user'];
+	//title of list
 	$title = $_GET['Title'];
-//	$x = $title.".txt";
-	//$title = $x;
+	
+	//all tasks
 	$mt1 = $_GET['mon1'];
 	$mt2 = $_GET['mon2'];
 	$mt3 = $_GET['mon3'];
@@ -29,6 +30,7 @@
 	$sut2 = $_GET['sun2'];
 	$sut3 = $_GET['sun3'];
 
+	//should be able to replace with config.php
 	$mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djoseph");
 	if ($mysqli->connect_errno)
 	{

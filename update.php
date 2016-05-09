@@ -1,7 +1,10 @@
 <?php
+
+//Created by Amber Yeasin
 session_start();
 include('config.php');
 
+//local variables
 $username = $_SESSION['login_user'];
 $title = $_GET['Title'];
 $m1 = $_GET['mon1'];
@@ -26,6 +29,8 @@ $su1 = $_GET['sun1'];
 $su2 = $_GET['sun2'];
 $su3 = $_GET['sun3'];
 
+
+//checks that everything is successfully edited
 if($m1 != ""){
 $um1 = $mysqli->query("UPDATE projData SET mondayTask1 = '$m1' WHERE title = '$title'");
   if($um1){
