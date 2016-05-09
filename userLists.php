@@ -107,6 +107,7 @@ echo "<table border='5'>";
 
 $listsFromUser =  $mysqli->query($search);
 
+			echo "<tr>".PHP_EOL;
 			echo "<td>"."title"."</td>".PHP_EOL;
 			echo "<td>"."mondayTask1"."</td>".PHP_EOL;
 			echo "<td>"."mondayTask2"."</td>".PHP_EOL;
@@ -129,9 +130,11 @@ $listsFromUser =  $mysqli->query($search);
 			echo "<td>"."sundayTask1"</td>".PHP_EOL;
 			echo "<td>"."sundayTask2"</td>".PHP_EOL;
 			echo "<td>"."sundayTask3"</td>".PHP_EOL;
+			echo "<tr>".PHP_EOL;
 
 while($row = $listsFromUser->fetch_assoc())
 		{
+			echo "<tr>".PHP_EOL;
 			echo "<td>".$row["title"]."</td>".PHP_EOL;
 			echo "<td>".$row["mondayTask1"]."</td>".PHP_EOL;
 			echo "<td>".$row["mondayTask2"]."</td>".PHP_EOL;
@@ -154,10 +157,11 @@ while($row = $listsFromUser->fetch_assoc())
 			echo "<td>".$row["sundayTask1"]."</td>".PHP_EOL;
 			echo "<td>".$row["sundayTask2"]."</td>".PHP_EOL;
 			echo "<td>".$row["sundayTask3"]."</td>".PHP_EOL;
+			echo "</tr>".PHP_EOL;
 		}
 		echo "</table>";
 
 
 echo "<a href = 'createlist.html'>".'Click to return to make a new list'."</a>".PHP_EOL;
-echo "<a href = logout.php'>".'Click to logout'."</a>".PHP_EOL;
+echo "<a href = 'logout.php'>".'Click to logout'."</a>".PHP_EOL;
 ?>
