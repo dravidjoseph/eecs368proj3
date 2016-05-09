@@ -127,9 +127,9 @@ $listsFromUser =  $mysqli->query($search);
 			echo "<td>"."saturdayTask1"."</td>".PHP_EOL;
 			echo "<td>"."saturdayTask2"."</td>".PHP_EOL;
 			echo "<td>"."saturdayTask3"."</td>".PHP_EOL;
-			echo "<td>"."sundayTask1"</td>".PHP_EOL;
-			echo "<td>"."sundayTask2"</td>".PHP_EOL;
-			echo "<td>"."sundayTask3"</td>".PHP_EOL;
+			echo "<td>"."sundayTask1"."</td>".PHP_EOL;
+			echo "<td>"."sundayTask2"."</td>".PHP_EOL;
+			echo "<td>"."sundayTask3"."</td>".PHP_EOL;
 			echo "<tr>".PHP_EOL;
 
 while($row = $listsFromUser->fetch_assoc())
