@@ -15,7 +15,7 @@ if($msyqli->connect_errno){
   exit();
 }
 
-    $query = "SELECT user_id FROM Users";
+    $query = "SELECT User FROM projUsers";
         if ($result = $mysqli->query($query)){
     $arr = $result->fetch_all();
     }
