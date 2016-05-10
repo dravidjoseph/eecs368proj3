@@ -130,6 +130,6 @@ while($row = $listsFromUser->fetch_assoc())
 
 echo "<a href = 'createlist.html'>".'Click to return to make a new list'."</a>".PHP_EOL;
 echo "<a href = 'logout.php'>".'Click to logout'."</a>".PHP_EOL;
-echo "<a href= 'list' download>".'Click to download this list'."</a>" .PHP_EOL;
+echo "<a href= 'newfile.txt' download= 'list'>".'Click to download this list'."</a>" .PHP_EOL;
 
 ?>
