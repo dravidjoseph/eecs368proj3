@@ -3,10 +3,11 @@
 <head>
     <title>New User Creation</title>
     <script type = "text/javascript" src = "validation.js"></script>
+	<link rel="stylesheet" type="text/css" href="userstyle.css">
 <head>
 
 <body>
-
+<!--
     <div id = "bodyDiv2">
         <form method = "POST"  action = "createNewLogin.php">
           Username<br><input type = "text" name = "user" size = "50"><br>
@@ -15,7 +16,24 @@
           <input type="Submit" name="signup" value="Submit" onclick="return checkPassWord();">
         </form>
     </div>
-
+-->
+	
+	<div class = "container">
+		<div class="wrapper">
+			<form action="" method="post" name="Login_Form" class="form-signin" action = "createNewLogin.php">       
+			    <h3 class="form-signin-heading">Welcome! Please Create Your Profile</h3>
+				  <hr class="colorgraph"><br>
+		  
+				  <input type="text" class="form-control" name="user" placeholder="Username" required="" autofocus="" />
+				  <input id = "p1" type="password" class="form-control" name="pass" placeholder="Password" required=""/>   
+				  <input id = "p2" type="password" class="form-control" name="pass2" placeholder="Re-Enter Password" required=""/>    		  
+		 
+				  <button class="btn btn-lg btn-primary btn-block"  name="signup" value="Login" type="Submit" onclick="return checkPassWord();">Login</button>
+				  <br>
+				  <h3 class="form-signin-heading">Already a User? Click <a href = "index.html">here</a></h3>   			
+			</form>			
+		</div>
+	</div>
 
 </body>
 
