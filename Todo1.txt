@@ -1,0 +1,22 @@
+Title:Todo1
+Monday task 1:Dog
+Monday task 2:Cat
+Monday task 3:Bar
+Tuesday task 1:Dog
+Tuesday task 2:Cat
+Tuesday task 3:Bar
+Wednesday task 1:Dog
+Wednesday task 2:Cat
+Wednesday task 3:Bar
+Thursday task 1:Dog
+Thursday task 2:Cat
+Thursday task 3:Bar
+Friday task 1:Dog
+Friday task 2:Cat
+Friday task 3:Bar
+Saturday task 1:Dog
+Saturday task 2:Cat
+Saturday task 3:Bar
+Sunday task 1:Dog
+Sunday task 2:Cat
+Sunday task 3:Bar

@@ -30,63 +30,47 @@
 				width:210px;
 			}
         </style>
+		<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script type="text/javascript" src="createlist.js"></script>
 	</head>
 	<body>
+		
+		<p align="center">
+			This is a to-do list page. The priorities are from 1 to 5 with 1 being the most prioritized. The days of the week are from 1 to 7 with 1 being monday.
+		</p>
+		<a href="userLists.php"><input align="center" type="button" value="Edit your lists"></a>
 		<table align="center">
 
 		<tr>
 			<td>
-				<form id = "list" action = createlist.php>
+				<form id = "list" action = createlist.php method="post">
 
 				<div id="section1"><b>Title of list</b></div>
 				<div id="section2">Title<input id="Title" type="text" name="Title" class="textform1"></div>
 
-				<div id="section1"><b>Monday</b></div>
-				<div id="section2">Task1<input id="mon1" type="text" name="mon1" class="textform1"></div>
-				<div id="section2">Task2<input id="mon2" type="text" name="mon2" class="textform1"></div>
-				<div id="section2">Task3<input id="mon3" type="text" name="mon3" class="textform1"></div>
+				<div id="section1"><b>Tasks</b></div>
+				<div id="inputTask"><input type="hidden" id="counter" name="counter" value="">
+		        	Task 1<br><input type="text" name="tasks0">Priority<select name="priority0">
+               <option value="1">1</option>
+               <option value="2">2</option>
+               <option value="3">3</option>
+               <option value="4">4</option>
+               <option value="5">5</option>
+          </select>Date<input type="date" class="textform1" name="date0">
+		     	</div>
+		     	<input type="button" value="Add another task" onClick="addTask('inputTask');">
 
-
-				<div id="section1"><b>Tuesday</b></div>
-				<div id="section2">Task1<input id="tue1" type="text" name="tue1" class="textform1"></div>
-				<div id="section2">Task2<input id="tue2" type="text" name="tue2" class="textform1"></div>
-				<div id="section2">Task3<input id="tue3" type="text" name="tue3" class="textform1"></div>
-
-				<div id="section1"><b>Wednesday</b></div>
-				<div id="section2">Task1<input id="wed1" type="text" name="wed1" class="textform1"></div>
-				<div id="section2">Task2<input id="wed2" type="text" name="wed2" class="textform1"></div>
-				<div id="section2">Task3<input id="wed3" type="text" name="wed3" class="textform1"></div>
-
-				<div id="section1"><b>Thursday</b></div>
-				<div id="section2">Task1<input id="thu1" type="text" name="thu1" class="textform1"></div>
-				<div id="section2">Task2<input id="thu2" type="text" name="thu2" class="textform1"></div>
-				<div id="section2">Task3<input id="thu3" type="text" name="thu3" class="textform1"></div>
-
-				<div id="section1"><b>Friday</b></div>
-				<div id="section2">Task1<input id="fri1" type="text" name="fri1" class="textform1"></div>
-				<div id="section2">Task2<input id="fri2" type="text" name="fri2" class="textform1"></div>
-				<div id="section2">Task3<input id="fri3" type="text" name="fri3" class="textform1"></div>
-
-				<div id="section1"><b>Saturday</b></div>
-				<div id="section2">Task1<input id="sat1" type="text" name="sat1" class="textform1"></div>
-				<div id="section2">Task2<input id="sat2" type="text" name="sat2" class="textform1"></div>
-				<div id="section2">Task3<input id="sat3" type="text" name="sat3" class="textform1"></div>
-
-				<div id="section1"><b>Sunday</b></div>
-				<div id="section2">Task1<input id="sun1" type="text" name="sun1" class="textform1"></div>
-				<div id="section2">Task2<input id="sun2" type="text" name="sun2" class="textform1"></div>
-				<div id="section2">Task3<input id="sun3" type="text" name="sun3" class="textform1"></div>
-
-				<input type="submit" id="submit" value="Submit" class="button1">
-				<input type="button" value="Clear Entire Form" class="button1" onClick="this.form.reset()">
+				<br><input type="submit" id="submit" value="Submit" class="button1" onClick="submitForm();">
+				<br><input type="button" value="Clear Entire Form" class="button1" onClick="this.form.reset()">
 				</form>
 			</td>
 		</tr>
 
 		</table>
-		<a href="userLists.php">"This the all the lists for the user."</a> <br>
-    <a href ="ViewOtherLists.html"> "See other lists" </a>
 	</body>
 </html>
