@@ -24,8 +24,6 @@
 		//searches throught the user name to find the username given
 		$search = "SELECT User FROM projUsers WHERE User = '$username'";
 
-		$search2 = "SELECT title FROM projUsers WHERE title = '$title'";
-
 		//this query adds information to the projData column of the tasks that the user enters into the form
 		$query1 = "INSERT INTO projData (username, title, Task, Priority, Date)
 		 VALUES ('$username','$title','$task','$priority','$date')";

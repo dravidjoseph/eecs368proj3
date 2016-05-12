@@ -73,7 +73,7 @@ $counter = 0;
 			echo "<td>"."Date"."</td>".PHP_EOL;
 			echo "<td>"."Edit Priority"."</td>".PHP_EOL;
 			echo "<tr>".PHP_EOL;
-			//$listsFromUser = $listsFromUser->sort_by("Priority");
+
 		while($row = $listsFromUser->fetch_assoc())
 		{
 			$task = $row["Task"];

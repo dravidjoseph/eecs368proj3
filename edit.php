@@ -56,7 +56,7 @@
 	
 	$title = $_GET['title'];
 	$counter = $_GET['counter'];
-	//$postcounter = 0;
+
 	
 	for($x = 0; $x < $counter; $x++)
 	{
@@ -77,7 +77,6 @@
 			echo "Priority unsuccessfully edited"."<br>";
 		}
 		
-		//$mysqli->close();
 		
 	}
 
