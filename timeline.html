@@ -1,0 +1,96 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+	<title>Timeline View</title>
+	</head>
+	<body>
+<!--SELECT (title, task, date, priority) FROM projData WHERE title = $title-->
+		<style>
+			* {
+			  font-family: century gothic;
+			}
+		</style>
+		<header>
+			<center>
+			<h1>Timeline for list "(get title)" </h1>
+				<h3> Priority:<span style="background-color:FireBrick">Very High</span>  
+											<span style="background-color:IndianRed">High</span> 
+											<span style="background-color:khaki">Medium</span> 
+											<span style="background-color:moccasin">Low</span> 
+											<span style="background-color:Papayawhip">Very Low</span> 
+				</h3>
+			</center>
+		</header>
+	
+
+	<table style= "width:100% position: left: 0; right: 0;">
+	<tr>
+		<td> 
+			<table id="today" style="width = 40" border="1" >
+				<tr>
+					<th>Today:</th>
+				</tr>
+				<tr>
+					<td>tasks</td>
+				</tr>
+			</table>
+		</td>
+		<td> 
+			<table id="tomorrow "style="width = 40" border="1">
+				<tr>
+					<th>Tomorrow:</th>
+				</tr>
+				<tr>
+					<td>tasks</td>
+				</tr>
+			</table>
+		</td>
+		<td> 
+			<table id="this week" style="width = 40" border="1">
+				<tr>
+					<th>This Week:</th>
+				</tr>
+				<tr>
+					<td>tasks</td>
+				</tr>
+			</table>
+		</td>
+		<td> 
+			<table id="this month" style="width = 40" border="1">
+				<tr>
+					<th>This Month:</th>
+				</tr>
+				<tr>
+					<td>tasks</td>
+				</tr>
+			</table>
+		</td>
+		<td> 
+			<table id="eventually" style="width = 40" border="1">
+				<tr>
+					<th>Eventually:</th>
+				</tr>
+				<tr>
+					<td>tasks</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	</table>
+
+	
+	<p> <a href="http://people.eecs.ku.edu/%7Etyeasin/team.html">Click here to go back to lists</a></p>
+	<p> <a href="http://people.eecs.ku.edu/%7Etyeasin/othergroups.html">Click here to log out</a></p>	
+	
+<script>
+function addTask() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
+}
+</script>	
+
+</body>
+</html>
