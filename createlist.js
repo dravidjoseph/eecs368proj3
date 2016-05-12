@@ -1,6 +1,7 @@
 //created by Michael Wang
 
 var taskCounter = 1;
+//this function allows the user to add a new task with all the inputs that the 1st task on the page has.
 function addTask(divName)
 {
      {
@@ -11,13 +12,4 @@ function addTask(divName)
 		taskCounter++;	
 		var x = document.getElementById('counter').value = taskCounter-1;
 	 }
-}
-function returnCounter()
-{
-	return taskCounter;
-}
-function submitForm()
-{
-	var task = getElementById(0).getValue();
-	alert(task);
 }

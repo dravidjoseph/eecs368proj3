@@ -8,12 +8,13 @@
 	$counter = $_POST['counter'];
 	$taskCounter=0;
 	
+	//grabs the information in the form and puts it into the data base
 	for($x = 0; $x <= $counter; $x++)
 	{
 		$task = $_POST["tasks$taskCounter"];
 		$priority = $_POST["priority$taskCounter"];
 		$date = $_POST["date$taskCounter"];
-		
+		//checks to see if the connection with the database is valid
 		$mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djoseph");
 		if ($mysqli->connect_errno)
 		{
@@ -28,9 +29,9 @@
 		$query1 = "INSERT INTO projData (username, title, Task, Priority, Date)
 		 VALUES ('$username','$title','$task','$priority','$date')";
 
-		if(!isset($username) || $username !== '')
+		if(!isset($username) || $username !== '')//checks to see if the username is not null
 		{
-			if(!isset($title) || $title !== '')
+			if(!isset($title) || $title !== '')//checks to see if the title is not null
 			{
 				$listOfUsers =  $mysqli->query($search);
 				if($listOfUsers->num_rows>0)
@@ -76,9 +77,6 @@
 			echo "not successfully added b/c not logged in".PHP_EOL;
 		}
 
-		//This function sets up a new file that is going to overwrite things if the file already exists.
-		//$myfileWrite = fopen($x, "w") or die("Can't open file!");
-		//These functions write to the file for the list
 		echo PHP_EOL;
 		$txt = "Title:".$title.PHP_EOL;
 		echo $txt.PHP_EOL;

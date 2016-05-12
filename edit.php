@@ -1,3 +1,4 @@
+<!--Created by Michael Wang -->
 <html>
 <head>
  		<style>
@@ -30,6 +31,7 @@
 				width:210px;
 			}
         </style>
+		<!-- Bootstrap code from online -->
 		<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -47,6 +49,7 @@
 	session_start();
 	$username = $_SESSION['login_user'];
 	
+	//checks to see if the connection with the database is valid
 	$mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djoseph");
 	if ($mysqli->connect_errno)
 	{
