@@ -60,7 +60,7 @@ $mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djosep
 	  exit();
 	}
 
-$search = "SELECT * FROM projData WHERE title = '$title'";
+$search = "SELECT * FROM projData WHERE title = '$title' ORDER BY Date ASC, Priority ASC";
 echo "<br>"."$title"."</br>".PHP_EOL;
 
 echo "<table border='5'>";
