@@ -1,3 +1,4 @@
+<!--Created by Michael Wang -->
 <html>
  	<head>
  		<style>
@@ -30,6 +31,10 @@
 				width:210px;
 			}
         </style>
+<<<<<<< HEAD
+=======
+		<!-- Bootstrap code from online -->
+>>>>>>> 1409a7b0f1fd89ecac823012f05996dff6a3e38d
 		<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
