@@ -39,8 +39,8 @@
         <script type="text/javascript" src="createlist.js"></script>
 	</head>
 	<body><a href = "createlist.html"><input align="center" type="button" value="Click to return to make a new list"></a>
+	<br><br><a href = "userLists.php"><input align="center" type="button" value="Click to edit a different list"></a></br></br>
 	<br><br><a href = "logout.php"><input align="center" type="button" value="Click to logout"></a></br></br>
-	<br></br>
 	</body>
 </html>
 <?php
@@ -61,7 +61,8 @@
 	for($x = 0; $x < $counter; $x++)
 	{
 		$priority = $_GET["priority$x"];
-		$query1 = "UPDATE projData SET Priority = '$priority' WHERE title = '$title'";
+		$task = $_GET["Task$x"];
+		$query1 = "UPDATE projData SET Priority = '$priority' WHERE title = '$title' AND Task = '$task'";
 		
 		//checks that everything is successfully edited
 		

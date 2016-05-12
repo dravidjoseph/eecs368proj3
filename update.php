@@ -40,8 +40,8 @@
 	</head>
 	<body>
 <a href = "createlist.html"><input align="center" type="button" value="Click to return to make a new list"></a>
-	<br><br><a href = "logout.php"><input align="center" type="button" value="Click to logout"></a></br></br>
-	<br></br>
+<br><br><a href = "userLists.php"><input align="center" type="button" value="Click to edit a different list"></a></br>
+<br><a href = "logout.php"><input align="center" type="button" value="Click to logout"></a></br></br>	
 <form action="edit.php">
 <?php
 
@@ -76,12 +76,14 @@ $counter = 0;
 			//$listsFromUser = $listsFromUser->sort_by("Priority");
 		while($row = $listsFromUser->fetch_assoc())
 		{
+			$task = $row["Task"];
 			echo "<tr>".PHP_EOL;
 			echo "<td>".$row["Task"]."</td>".PHP_EOL;
 			echo "<td>".$row["Priority"]."</td>".PHP_EOL;
 			echo "<td>".$row["Date"]."</td>".PHP_EOL;
 			echo "<td>"."Priority"."<select name='priority$counter'>"."<option value='1'>".'1'."</option>"."<option value='2'>".'2'."</option>"."<option value='3'>".'3'."</option>"."
                <option value='4'>".'4'."</option>"."<option value='5'>".'5'."</option>"."</select>"."</td>".PHP_EOL;
+			echo "<input type='hidden' name='Task$counter' value='$task'>".PHP_EOL;
 			echo "</tr>".PHP_EOL;
 			$counter++;
 		}
