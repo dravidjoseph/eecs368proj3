@@ -60,12 +60,7 @@ $mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djosep
 	  exit();
 	}
 
-<<<<<<< HEAD
-$search = "SELECT * FROM projData WHERE title = '$title' ORDER BY Priority ASC";
-//$search1 = "SELECT * FROM projData ORDER BY Priority ASC";
-=======
 $search = "SELECT * FROM projData WHERE title = '$title'";
->>>>>>> f07a6c184ba0c3d365ba3514788e316b5fab0301
 echo "<br>"."$title"."</br>".PHP_EOL;
 
 echo "<table border='5'>";
@@ -78,11 +73,7 @@ $counter = 0;
 			echo "<td>"."Date"."</td>".PHP_EOL;
 			echo "<td>"."Edit Priority"."</td>".PHP_EOL;
 			echo "<tr>".PHP_EOL;
-<<<<<<< HEAD
-			//$listsFromUser = $listsFromUser->sort_by(Priority);
-=======
 			//$listsFromUser = $listsFromUser->sort_by("Priority");
->>>>>>> f07a6c184ba0c3d365ba3514788e316b5fab0301
 		while($row = $listsFromUser->fetch_assoc())
 		{
 			echo "<tr>".PHP_EOL;

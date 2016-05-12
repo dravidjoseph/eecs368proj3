@@ -14,8 +14,12 @@ function addTask(divName)
         document.getElementById(divName).appendChild(newdiv);
         
 		taskCounter++;	
-		var x = document.getElementById('counter').value = taskCounter;
+		var x = document.getElementById('counter').value = taskCounter-1;
 	 }
+}
+function returnCounter()
+{
+	return taskCounter;
 }
 function submitForm()
 {

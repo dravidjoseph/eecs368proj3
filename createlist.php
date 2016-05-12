@@ -8,7 +8,7 @@
 	$counter = $_POST['counter'];
 	$taskCounter=0;
 	
-	for($x = 0; $x < $counter; $x++)
+	for($x = 0; $x <= $counter; $x++)
 	{
 		$task = $_POST["tasks$taskCounter"];
 		$priority = $_POST["priority$taskCounter"];
