@@ -64,8 +64,9 @@
 	for($x = 0; $x < $counter; $x++)
 	{
 		$priority = $_GET["priority$x"];
-		$task = $_GET["Task$x"];
-		$query1 = "UPDATE projData SET Priority = '$priority' WHERE title = '$title' AND Task = '$task'";
+		$task = $_GET["task$x"];
+		$date = $_GET["date$x"];
+		$query1 = "UPDATE projData SET Task = '$task' WHERE title = '$title' AND Priority = '$priority' AND Date = '$date'";
 		
 		//checks that everything is successfully edited
 		
@@ -73,11 +74,11 @@
 
 		if($edit)
 		{
-			echo "Priority successfully edited"."<br>";
+			echo "Task successfully edited"."<br>";
 		}
 		else
 		{
-			echo "Priority unsuccessfully edited"."<br>";
+			echo "Task unsuccessfully edited"."<br>";
 		}
 		
 		
