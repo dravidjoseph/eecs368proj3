@@ -56,7 +56,7 @@
 	$title = $_GET['title'];
 	$counter = $_GET['counter'];
 
-	
+	//this updates the task
 	for($x = 0; $x < $counter; $x++)
 	{
 		$priority = $_GET["priority$x"];
@@ -78,7 +78,7 @@
 			echo "Task unsuccessfully edited"."<br>";
 		}
 	}
-	
+	//this updates the priority
 	for($x = 0; $x < $counter; $x++)
 	{
 		$priority = $_GET["priority$x"];
@@ -100,7 +100,7 @@
 			echo "Priority unsuccessfully edited"."<br>";
 		}
 	}
-	
+	//this updates the date
 	for($x = 0; $x < $counter; $x++)
 	{
 		$priority = $_GET["priority$x"];
