@@ -150,6 +150,10 @@ $initialQuery = $mysqli->query($initialTitle);
 $initial = $initialQuery->fetch_assoc();
 $title = $initial["title"];
 echo "<h1> Lists for $user </h1>".PHP_EOL;
+if ($titleCount >0)
+{
+	$titleCount ++;
+}
 echo "<input type='button' class = 'button' value='$title' onClick=displayList('div$titleCount')><br><br>".PHP_EOL;
 echo "<div id = div$titleCount style ='display:none'>".PHP_EOL;
 echo "<table class = 'responstable' border='5'>";
@@ -162,15 +166,9 @@ echo "<table class = 'responstable' border='5'>";
 			echo "<td>"."Priority"."</td>".PHP_EOL;
 			echo "<td>"."Date"."</td>".PHP_EOL;
 			echo "<tr>".PHP_EOL;
-
 while($row = $listsFromUser->fetch_assoc())
 		{
 				//$titleSearch = 'SELECT Task FROM projData WHERE title = "$row["title"]"';
-				echo "<tr>".PHP_EOL;
-				echo "<td>".$row["Task"]."</td>".PHP_EOL;
-				echo "<td>".$row["Priority"]."</td>".PHP_EOL;
-				echo "<td>".$row["Date"]."</td>".PHP_EOL;
-				echo "</tr>".PHP_EOL;
 				if($title !== $row["title"])
 				{
 					
@@ -190,18 +188,41 @@ while($row = $listsFromUser->fetch_assoc())
 					echo "<tr>".PHP_EOL;
 					
 				}
+				echo "<tr>".PHP_EOL;
+				echo "<td>".$row["Task"]."</td>".PHP_EOL;
+				echo "<td>".$row["Priority"]."</td>".PHP_EOL;
+				echo "<td>".$row["Date"]."</td>".PHP_EOL;
+				echo "</tr>".PHP_EOL;
+				
 				$title = $row["title"];
 
 		}
 		echo "</table>";
 		echo "</div>".PHP_EOL;
-		echo "</form>".PHP_EOL;
-		$firstTitle = $titleCount;
+echo "<form action = 'download.php' method = 'post'>";
+echo "<input type = 'hidden' value = '$user' name = 'user'>";
+echo "<br>Download a List from $user:<br><select name='Download'>".PHP_EOL;
+$dropQuery = "SELECT * FROM projData WHERE username = '$user'";
+$titleFind = $mysqli->query($dropQuery);
+while ($row = $titleFind->fetch_assoc())
+{
+	if($title !== $row["title"])
+	{
+		$tempTitle = $row["title"];
+		echo ("<option value = '$tempTitle'> $tempTitle</option>");
+	}
+	$title = $row["title"];
+}
+echo "</select><br>".PHP_EOL;
+echo "<input type = 'submit' value = 'Download' class = 'button'>";
+echo "</form>";
+
 }
 else
 {
 	echo "<h1> No Lists available for $user </h1>".PHP_EOL;
 }
+
 }
 $search = "SELECT * FROM projData WHERE username = '$yourUser'";
 $listTest =  $mysqli->query($search);
@@ -254,16 +275,12 @@ while($row = $listsFromUser->fetch_assoc())
 		}
 		echo "</table>";
 		echo "</div>".PHP_EOL;
-		echo "</form>".PHP_EOL;
 }
 else
 {
 	echo "<h1> You have no Lists </h1>".PHP_EOL;
 
 }
-$listsFromUser =  $mysqli->query($search);
-echo"<h1> Download a List: </h1>";
-//echo "Select a List:<select name='Download'>".PHP_EOL;
 
 
 
@@ -272,7 +289,6 @@ echo"<h1> Download a List: </h1>";
 echo "<a class = 'button' href = 'createlist.html'>".'Click to return to make a new list'."</a>".PHP_EOL;
 echo "<a class = 'button' href = 'logout.php'>".'Click to logout'."</a>".PHP_EOL;
 echo "<a class = 'button' href= 'newfile.csv' download= 'list'>".'Click to download this list'."</a>" .PHP_EOL;
-
 ?>
 </body>
 </html>

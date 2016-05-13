@@ -2,7 +2,6 @@
 
 session_start();
 $username = $_SESSION['login_user'];
-
 define('DB_HOST','mysql.eecs.ku.edu');		//Host of Database
 define('DB_NAME','djoseph');				//Name of database (Dravid)
 define('DB_USER','djoseph');				//Username
