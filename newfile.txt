@@ -1,1 +1,0 @@
-title |mondayTask1 |mondayTask2 |mondayTask3 |tuesdayTask1 |tuesdayTask2 |tuesdayTask3 |wednesdayTask1 |wednesdayTask2 |wednesdayTask3 |thursdayTask1 |thursdayTask2 |thursdayTask3 |fridayTask1 |fridayTask2 |fridayTask3 |saturdayTask1 |saturdayTask2 |saturdayTask3 |sundayTask1 |sundayTask2 |sundayTask3 |
