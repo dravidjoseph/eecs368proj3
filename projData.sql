@@ -39,7 +39,6 @@ CREATE TABLE IF NOT EXISTS `projData` (
 --
 
 INSERT INTO `projData` (`username`, `title`, `Task`, `Priority`, `Date`) VALUES
-('red', 't1', '1', 1, '2016-05-10'),
 ('mike', 'test1', 'hi', 1, '2016-05-11'),
 ('mike', 'test3', 'aye', 1, '2016-05-20'),
 ('mike', 'test3', 'heyyy', 1, '2016-05-20'),
