@@ -57,7 +57,7 @@ $mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djosep
 	  exit();
 	}
 	
-	$search = "SELECT title FROM projData WHERE username = '$username'";
+	$search = "SELECT title FROM projData";
 		echo "<select name='projData'>";
 
 	  	$listOfLists =  $mysqli->query($search);
