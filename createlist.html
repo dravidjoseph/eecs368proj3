@@ -31,37 +31,24 @@
 				width:210px;
 			}
         </style>
-<<<<<<< HEAD
-=======
-		<!-- Bootstrap code from online -->
->>>>>>> 1409a7b0f1fd89ecac823012f05996dff6a3e38d
-		<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script type="text/javascript" src="createlist.js"></script>
 	</head>
-	<body>
+	<body bgcolor="#FF00FF" align="center">
 		
 		<p align="center">
 			This is a to-do list page. The priorities are from 1 to 5 with 1 being the most prioritized. The days of the week are from 1 to 7 with 1 being monday.
 		</p>
-<<<<<<< HEAD
-		<a href="userLists.php"><input align="center" type="button" value="This the all the lists for the user"></a>
-=======
+		
 		<a href="userLists.php"><input align="center" type="button" value="Edit your lists"></a>
->>>>>>> 1409a7b0f1fd89ecac823012f05996dff6a3e38d
-		<table align="center">
+		<br><br><a href = "logout.php"><input align="center" type="button" value="Click to logout"></a></br></br>
+		<table align="center" bgcolor="#00FF00">
 
 		<tr>
 			<td>
-<<<<<<< HEAD
-				<form id = "list" action = createlist.php method="post">
-=======
 				<form id = "list" action = "createlist.php" method="post">
->>>>>>> 1409a7b0f1fd89ecac823012f05996dff6a3e38d
 
 				<div id="section1"><b>Title of list</b></div>
 				<div id="section2">Title<input id="Title" type="text" name="Title" class="textform1"></div>
@@ -75,30 +62,16 @@
                <option value="5">5</option>
           </select>Date<input type="date" class="textform1" name="date0">
 		     	</div>
-		     	<input type="button" value="Add another Task" onClick="addTask('inputTask');">
+		     	<input type="button" value="Add another Task" onClick=addTask('inputTask')>
 
-<<<<<<< HEAD
-				<div id="section1"><b>Tasks</b></div>
-				<div id="inputTask"><input type="hidden" id="counter" name="counter" value="">
-		        	Task 1<br><input type="text" name="tasks0">Priority<select name="priority0">
-               <option value="1">1</option>
-               <option value="2">2</option>
-               <option value="3">3</option>
-               <option value="4">4</option>
-               <option value="5">5</option>
-          </select>Date<input type="date" class="textform1" name="date0">
-		     	</div>
-		     	<input type="button" value="Add another task" onClick="addTask('inputTask');">
-
-				<br><input type="submit" id="submit" value="Submit" class="button1" onClick="submitForm();">
-=======
 				<br><input type="submit" id="submit" value="Submit" class="button1">
->>>>>>> 1409a7b0f1fd89ecac823012f05996dff6a3e38d
 				<br><input type="button" value="Clear Entire Form" class="button1" onClick="this.form.reset()">
 				</form>
 			</td>
 		</tr>
 
 		</table>
+		
+		<p align="center"><img src="pic1.jpg" align="middle" height = "50%" width = "100%"></p>
 	</body>
 </html>

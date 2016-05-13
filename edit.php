@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 <!--Created by Michael Wang -->
 <html>
 <head>
@@ -33,29 +31,21 @@
 				width:210px;
 			}
         </style>
-		<!-- Bootstrap code from online -->
-		<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+		
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script type="text/javascript" src="createlist.js"></script>
 	</head>
-	<body><a href = "createlist.html"><input align="center" type="button" value="Click to return to make a new list"></a>
+	<body bgcolor="#FF0000"><a href = "createlist.html"><input align="center" type="button" value="Click to return to make a new list"></a>
 	<br><br><a href = "userLists.php"><input align="center" type="button" value="Click to edit a different list"></a></br></br>
 	<br><br><a href = "logout.php"><input align="center" type="button" value="Click to logout"></a></br></br>
 	</body>
 </html>
->>>>>>> 1409a7b0f1fd89ecac823012f05996dff6a3e38d
 <?php
 	session_start();
 	$username = $_SESSION['login_user'];
 	
-<<<<<<< HEAD
-=======
 	//checks to see if the connection with the database is valid
->>>>>>> 1409a7b0f1fd89ecac823012f05996dff6a3e38d
 	$mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djoseph");
 	if ($mysqli->connect_errno)
 	{
@@ -64,30 +54,21 @@
 	}
 	
 	$title = $_GET['title'];
-<<<<<<< HEAD
-	$counter = $_GET['$counter'];
-	$postcounter = 0;
-	
-	$query1 = "UPDATE projData SET Priority = '$priority' WHERE ((Priority != '$priority')&&(title == '$title'))";
-	
-	for($x = 0; $x < $counter; $x++)
-	{
-		$priority = $_POST["priority$counter"];
-=======
 	$counter = $_GET['counter'];
 
-	
+	//this updates the task
 	for($x = 0; $x < $counter; $x++)
 	{
 		$priority = $_GET["priority$x"];
 		$task = $_GET["task$x"];
 		$date = $_GET["date$x"];
-		$query1 = "UPDATE projData SET Task = '$task' WHERE title = '$title' AND Priority = '$priority' AND Date = '$date'";
+		$priority1 = $_GET["priority1$x"];
+		$task1 = $_GET["task1$x"];
+		$date1 = $_GET["date1$x"];
+		$query1 = "UPDATE projData SET Task = '$task' WHERE title = '$title' AND Priority = '$priority1' AND Date = '$date1'";
 		
 		//checks that everything is successfully edited
-		
 		$edit = $mysqli->query($query1);
-
 		if($edit)
 		{
 			echo "Task successfully edited"."<br>";
@@ -96,9 +77,50 @@
 		{
 			echo "Task unsuccessfully edited"."<br>";
 		}
->>>>>>> 1409a7b0f1fd89ecac823012f05996dff6a3e38d
+	}
+	//this updates the priority
+	for($x = 0; $x < $counter; $x++)
+	{
+		$priority = $_GET["priority$x"];
+		$task = $_GET["task$x"];
+		$date = $_GET["date$x"];
+		$priority1 = $_GET["priority1$x"];
+		$task1 = $_GET["task1$x"];
+		$date1 = $_GET["date1$x"];
+		$query2 = "UPDATE projData SET Priority = '$priority' WHERE title = '$title' AND Task = '$task1' AND Date = '$date1'";
 		
+		//checks that everything is successfully edited
+		$edit = $mysqli->query($query2);
+		if($edit)
+		{
+			echo "Priority successfully edited"."<br>";
+		}
+		else
+		{
+			echo "Priority unsuccessfully edited"."<br>";
+		}
+	}
+	//this updates the date
+	for($x = 0; $x < $counter; $x++)
+	{
+		$priority = $_GET["priority$x"];
+		$task = $_GET["task$x"];
+		$date = $_GET["date$x"];
+		$priority1 = $_GET["priority1$x"];
+		$task1 = $_GET["task1$x"];
+		$date1 = $_GET["date1$x"];
+		$query3 = "UPDATE projData SET Date = '$date' WHERE title = '$title' AND Priority = '$priority1' AND Task = '$task1'";
 		
+		//checks that everything is successfully edited
+		$edit = $mysqli->query($query3);
+		if($edit)
+		{
+			echo "Date successfully edited"."<br>";
+		}
+		else
+		{
+			echo "Date unsuccessfully edited"."<br>";
+		}
 	}
 
 ?>

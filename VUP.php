@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+$username = $_SESSION['login_user'];
+
 define('DB_HOST','mysql.eecs.ku.edu');		//Host of Database
 define('DB_NAME','djoseph');				//Name of database (Dravid)
 define('DB_USER','djoseph');				//Username
@@ -20,12 +24,13 @@ if($msyqli->connect_errno){
     $arr = $result->fetch_all();
     }
 
-    echo "<select name = 'login_user' id = 'login_user'>";
-
+		echo($username).PHP_EOL;
         foreach($arr as $entry) {
-        echo "<option value= '$entry[0]'>$entry[0] </option>";
+		if($entry[0] !== $username)
+		{
+        echo "<input type='checkbox' name = 'user[]' id = 'user' value='$entry[0]'>$entry[0]<br>";
+		}
         }
 
-    echo "</select>";
     $mysqli->close();
 ?>
