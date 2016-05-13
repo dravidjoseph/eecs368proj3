@@ -32,16 +32,11 @@
 				width:210px;
 			}
         </style>
-		<!-- Bootstrap code from online -->
-		<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		
         <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
         <script type="text/javascript" src="createlist.js"></script>
 	</head>
-	<body>
+	<body bgcolor="#00FFFF" align="center">
 <a href = "createlist.html"><input align="center" type="button" value="Click to return to make a new list"></a>
 <br><br><a href = "userLists.php"><input align="center" type="button" value="Click to edit a different list"></a></br>
 <br><a href = "logout.php"><input align="center" type="button" value="Click to logout"></a></br></br>	
@@ -65,7 +60,7 @@ $mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djosep
 $search = "SELECT * FROM projData WHERE title = '$title' ORDER BY Date ASC, Priority ASC";
 echo "<br>"."$title"."</br>".PHP_EOL;
 
-echo "<table border='5'>";
+echo "<table border='5' align='center'>";
 
 $listsFromUser =  $mysqli->query($search);
 $counter = 0;
@@ -74,6 +69,8 @@ $counter = 0;
 			echo "<td>"."Priority"."</td>".PHP_EOL;
 			echo "<td>"."Date"."</td>".PHP_EOL;
 			echo "<td>"."Edit Task"."</td>".PHP_EOL;
+			echo "<td>"."Edit Priority"."</td>".PHP_EOL;
+			echo "<td>"."Edit Date"."</td>".PHP_EOL;
 			echo "<tr>".PHP_EOL;
 
 		while($row = $listsFromUser->fetch_assoc())
@@ -86,8 +83,12 @@ $counter = 0;
 			echo "<td>".$row["Priority"]."</td>".PHP_EOL;
 			echo "<td>".$row["Date"]."</td>".PHP_EOL;
 			echo "<td>"."Task"."<input type='text' name='task$counter' value='$task'>"."</td>".PHP_EOL;
-			echo "<input type='hidden' name='priority$counter' value='$priority'>".PHP_EOL;
-			echo "<input type='hidden' name='date$counter' value='$date'>".PHP_EOL;
+			echo "<td>"."Priority"."<select name='priority$counter' value='$priority'>"."<option value='1'>".'1'."</option>"."<option value='2'>".'2'."</option>"."<option value='3'>".'3'."</option>"."
+ -               <option value='4'>".'4'."</option>"."<option value='5'>".'5'."</option>"."</select>"."</td>".PHP_EOL;
+			echo "<td>"."Date"."<input type='date' name='date0' value='$date'>".PHP_EOL;
+			echo "<input type='hidden' name='task1$counter' value='$task'>".PHP_EOL;
+			echo "<input type='hidden' name='priority1$counter' value='$priority'>"."</td>".PHP_EOL;
+			echo "<input type='hidden' name='date1$counter' value='$date'>".PHP_EOL;
 			echo "</tr>".PHP_EOL;
 			$counter++;
 		}
@@ -98,5 +99,6 @@ $counter = 0;
 ?>
 <input type="submit" value="submit">
 </form>
+<img src="pic3.jpg" height = "50%" width = "50%">
 </body>
 </html>
