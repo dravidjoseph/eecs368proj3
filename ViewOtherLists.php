@@ -201,7 +201,7 @@ while($row = $listsFromUser->fetch_assoc())
 		echo "</div>".PHP_EOL;
 echo "<form action = 'download.php' method = 'post'>";
 echo "<input type = 'hidden' value = '$user' name = 'user'>";
-echo "<br>Download a List from $user:<br><select name='Download'>".PHP_EOL;
+echo "<br>Download a List from $user:<br><select name='projData'>".PHP_EOL;
 $dropQuery = "SELECT * FROM projData WHERE username = '$user'";
 $titleFind = $mysqli->query($dropQuery);
 while ($row = $titleFind->fetch_assoc())
@@ -285,10 +285,9 @@ else
 
 
 
-
+echo "<a class = 'button' href = 'timeline.html'>".'Click to view timelines'."</a>".PHP_EOL;
 echo "<a class = 'button' href = 'createlist.html'>".'Click to return to make a new list'."</a>".PHP_EOL;
 echo "<a class = 'button' href = 'logout.php'>".'Click to logout'."</a>".PHP_EOL;
-echo "<a class = 'button' href= 'newfile.csv' download= 'list'>".'Click to download this list'."</a>" .PHP_EOL;
 ?>
 </body>
 </html>

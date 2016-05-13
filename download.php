@@ -45,7 +45,7 @@ $mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djosep
 	  exit();
 	}
 
-$title = $_POST["Download"];
+$title = $_POST["projData"];
 $user = $_POST["user"];
 $search = "SELECT * FROM projData WHERE title = '$title' AND username = '$user'";
 $listsFromUser =  $mysqli->query($search);
