@@ -166,11 +166,6 @@ echo "<table class = 'responstable' border='5'>";
 while($row = $listsFromUser->fetch_assoc())
 		{
 				//$titleSearch = 'SELECT Task FROM projData WHERE title = "$row["title"]"';
-				echo "<tr>".PHP_EOL;
-				echo "<td>".$row["Task"]."</td>".PHP_EOL;
-				echo "<td>".$row["Priority"]."</td>".PHP_EOL;
-				echo "<td>".$row["Date"]."</td>".PHP_EOL;
-				echo "</tr>".PHP_EOL;
 				if($title !== $row["title"])
 				{
 					
@@ -190,6 +185,12 @@ while($row = $listsFromUser->fetch_assoc())
 					echo "<tr>".PHP_EOL;
 					
 				}
+				echo "<tr>".PHP_EOL;
+				echo "<td>".$row["Task"]."</td>".PHP_EOL;
+				echo "<td>".$row["Priority"]."</td>".PHP_EOL;
+				echo "<td>".$row["Date"]."</td>".PHP_EOL;
+				echo "</tr>".PHP_EOL;
+				
 				$title = $row["title"];
 
 		}
