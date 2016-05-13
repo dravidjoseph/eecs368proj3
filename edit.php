@@ -62,12 +62,13 @@
 		$priority = $_GET["priority$x"];
 		$task = $_GET["task$x"];
 		$date = $_GET["date$x"];
-		$query1 = "UPDATE projData SET Task = '$task' WHERE title = '$title' AND Priority = '$priority' AND Date = '$date'";
+		$priority1 = $_GET["priority1$x"];
+		$task1 = $_GET["task1$x"];
+		$date1 = $_GET["date1$x"];
+		$query1 = "UPDATE projData SET Task = '$task' WHERE title = '$title' AND Priority = '$priority1' AND Date = '$date1'";
 		
 		//checks that everything is successfully edited
-		
 		$edit = $mysqli->query($query1);
-
 		if($edit)
 		{
 			echo "Task successfully edited"."<br>";
@@ -76,8 +77,50 @@
 		{
 			echo "Task unsuccessfully edited"."<br>";
 		}
+	}
+	
+	for($x = 0; $x < $counter; $x++)
+	{
+		$priority = $_GET["priority$x"];
+		$task = $_GET["task$x"];
+		$date = $_GET["date$x"];
+		$priority1 = $_GET["priority1$x"];
+		$task1 = $_GET["task1$x"];
+		$date1 = $_GET["date1$x"];
+		$query2 = "UPDATE projData SET Priority = '$priority' WHERE title = '$title' AND Task = '$task1' AND Date = '$date1'";
 		
+		//checks that everything is successfully edited
+		$edit = $mysqli->query($query2);
+		if($edit)
+		{
+			echo "Priority successfully edited"."<br>";
+		}
+		else
+		{
+			echo "Priority unsuccessfully edited"."<br>";
+		}
+	}
+	
+	for($x = 0; $x < $counter; $x++)
+	{
+		$priority = $_GET["priority$x"];
+		$task = $_GET["task$x"];
+		$date = $_GET["date$x"];
+		$priority1 = $_GET["priority1$x"];
+		$task1 = $_GET["task1$x"];
+		$date1 = $_GET["date1$x"];
+		$query3 = "UPDATE projData SET Date = '$date' WHERE title = '$title' AND Priority = '$priority1' AND Task = '$task1'";
 		
+		//checks that everything is successfully edited
+		$edit = $mysqli->query($query3);
+		if($edit)
+		{
+			echo "Date successfully edited"."<br>";
+		}
+		else
+		{
+			echo "Date unsuccessfully edited"."<br>";
+		}
 	}
 
 ?>

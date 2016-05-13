@@ -69,6 +69,8 @@ $counter = 0;
 			echo "<td>"."Priority"."</td>".PHP_EOL;
 			echo "<td>"."Date"."</td>".PHP_EOL;
 			echo "<td>"."Edit Task"."</td>".PHP_EOL;
+			echo "<td>"."Edit Priority"."</td>".PHP_EOL;
+			echo "<td>"."Edit Date"."</td>".PHP_EOL;
 			echo "<tr>".PHP_EOL;
 
 		while($row = $listsFromUser->fetch_assoc())
@@ -81,8 +83,12 @@ $counter = 0;
 			echo "<td>".$row["Priority"]."</td>".PHP_EOL;
 			echo "<td>".$row["Date"]."</td>".PHP_EOL;
 			echo "<td>"."Task"."<input type='text' name='task$counter' value='$task'>"."</td>".PHP_EOL;
-			echo "<input type='hidden' name='priority$counter' value='$priority'>".PHP_EOL;
-			echo "<input type='hidden' name='date$counter' value='$date'>".PHP_EOL;
+			echo "<td>"."Priority"."<select name='priority$counter' value='$priority'>"."<option value='1'>".'1'."</option>"."<option value='2'>".'2'."</option>"."<option value='3'>".'3'."</option>"."
+ -               <option value='4'>".'4'."</option>"."<option value='5'>".'5'."</option>"."</select>"."</td>".PHP_EOL;
+			echo "<td>"."Date"."<input type='date' name='date0' value='$date'>".PHP_EOL;
+			echo "<input type='hidden' name='task1$counter' value='$task'>".PHP_EOL;
+			echo "<input type='hidden' name='priority1$counter' value='$priority'>"."</td>".PHP_EOL;
+			echo "<input type='hidden' name='date1$counter' value='$date'>".PHP_EOL;
 			echo "</tr>".PHP_EOL;
 			$counter++;
 		}
