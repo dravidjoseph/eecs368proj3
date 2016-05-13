@@ -61,12 +61,17 @@ $mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djosep
 		echo "<select name='projData'>";
 
 	  	$listOfLists =  $mysqli->query($search);
-
+		
 		while($row = $listOfLists->fetch_assoc())
 		{
+			if($title !== $row["title"])
+				{
 			$tValue = $row["title"];
 			echo "<option value='$tValue'>".$row["title"]."</option>".PHP_EOL; 
+				}
+				$title = $row["title"];
 		}
+		
 		echo "</select>";
 }
 ?>

@@ -41,11 +41,10 @@
         <script type="text/javascript" src="createlist.js"></script>
 	</head>
 	<body>
-	<p>Table of all lists by this user</p>
-	<a href = "createlist.html"><input align="center" type="button" value="Click to return to make a new list"></a>
+	<br><br><a href = "createlist.html"><input align="center" type="button" value="Click to return to make a new list"></a></br></br>
 	<br><br><a href = "logout.php"><input align="center" type="button" value="Click to logout"></a></br></br>
 	<br></br>
-	<p>Select a list to edit</p>
+	<p>Select a list to view the timeline</p>
 
 		</table>
 <?php
@@ -62,14 +61,19 @@ $mysqli = new mysqli("mysql.eecs.ku.edu", "djoseph", "f2TUteC4dQRqL7jR", "djosep
 	}
 	
 	$search = "SELECT title FROM projData";
+	echo $username;
 		echo "<select name='projData'>";
 
 	  	$listOfLists =  $mysqli->query($search);
 
 		while($row = $listOfLists->fetch_assoc())
 		{
+		if($title !== $row["title"])
+				{
 			$tValue = $row["title"];
 			echo "<option value='$tValue'>".$row["title"]."</option>".PHP_EOL; 
+			}
+				$title = $row["title"];
 		}
 		echo "</select>";
 }
